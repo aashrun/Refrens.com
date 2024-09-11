@@ -1,6 +1,6 @@
 To install and run on the local machine, follow the below steps - 
 
-1. git clone *the repo link goes here*
+1. git clone <the repo link goes here>
 2. cd Refrens.com
 3. npm install
 4. npx nodemon app.js
