@@ -22,7 +22,7 @@ This API provides endpoints to manage invoices by generating, updating invoices,
 
 ## Generate Invoice API
 
-**Endpoint:** `POST /invoice/generate`
+**Endpoint:** `POST refrens/generateInvoice`
 
 This API is used to generate new invoices from a CSV or Excel file. It performs the following tasks:
 
@@ -62,12 +62,12 @@ This API is used to generate new invoices from a CSV or Excel file. It performs 
     }
   ]
 }
-
+```
 
 
 ## Update Invoice API
 
-**Endpoint:** `PUT /invoice/:invoiceId`
+**Endpoint:** `PUT refrens/updateInvoice/:invoiceId`
 
 This API allows updating an existing invoice. You can modify fields such as the customer name, date, total amount, or items.
 
@@ -87,6 +87,7 @@ This API allows updating an existing invoice. You can modify fields such as the 
   "Date": "2024-09-12",
   "Total Amount": 3500
 }
+```
 
 ### Example Response Body:
 ```json
@@ -108,13 +109,13 @@ This API allows updating an existing invoice. You can modify fields such as the 
     "Total Amount": 3500
   }
 }
-
+```
 
 
 
 ## Update Items API
 
-**Endpoint:** `PUT /invoice/update/:invoiceId/:itemId`
+**Endpoint:** `PUT refrens/updateItems/:invoiceId/:itemId`
 
 This API allows updating specific items within an existing invoice. The item to be updated is identified by the `itemId`, and the necessary fields in the item can be modified.
 
@@ -136,10 +137,11 @@ This API allows updating specific items within an existing invoice. The item to 
   "Item Price": 150,
   "Item Total": 450
 }
+```
 
 ### Example Response Body:
 ``` json
 {
   "message": "Invoice successfully updated!"
 }
-
+```
